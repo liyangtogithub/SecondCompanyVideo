@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_main_activity_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoMainActivity"
+    android:background="@drawable/activity_bg" >
+
+    
+    
+      <ImageView
+        android:id="@+id/iv_activity_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/activity_bg"
+        />
+	<SurfaceView
+        android:id="@+id/sf_video_play_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:id="@+id/fragment_container_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+	
+</RelativeLayout>

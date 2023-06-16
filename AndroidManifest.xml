@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adayo.videoplayer"
+    android:versionCode="61"
+    android:sharedUserId="android.uid.system"
+    android:versionName="V0.60-20160411" >
+
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:name="com.adayo.videoplayer.AdayoVideoPlayerApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_videoplayer_launcher"
+        android:label="@string/app_name"
+        android:configChanges="locale|mnc|mcc|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
+        android:launchMode="singleTask"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        >
+        <meta-data android:name="adayo_App" android:value="true" />
+		<!-- <uses-library android:name="com.adayo.midware.proxy"></uses-library> -->
+        <activity
+            android:name=".VideoMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.adayo.intent.action.video" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+ 			<meta-data
+                android:name="adayoAction"
+                android:value="com.adayo.intent.action.video" />
+        </activity>
+      
+    </application>
+
+</manifest>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/tv_timed_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textSize="18sp" />
+	
+    <RelativeLayout
+        android:id="@+id/eq_btn_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/eq_button_margin_right"
+        android:layout_marginTop="@dimen/eq_button_margin_top" >
+
+        <com.adayo.an6v.ui.EQButton
+            android:id="@+id/btn_eq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true" />
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favorite_bg"/>
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_playmask_bottom_bar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_play_pos_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70.0px" >
+
+            <TextView
+                android:id="@+id/tv_time_left"
+                style="@style/progress_bar_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/pb_play_progress_id" />
+
+            <SeekBar
+                android:id="@+id/pb_play_progress_id"
+                style="@style/video_seek_bar"
+                android:layout_width="@dimen/progress_bar_width"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="0dp"
+                android:thumb="@null" />
+
+            <TextView
+                android:id="@+id/tv_time_right"
+                style="@style/progress_bar_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/pb_play_progress_id" />
+        </RelativeLayout>
+
+        <com.adayo.an6v.ui.ControlButtons
+            android:id="@+id/control_buttons_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.adayo.an6v.ui.ControlButtons>
+    </LinearLayout>
+
+    <com.adayo.an6v.ui.ParkingWarningView
+        android:id="@+id/parking_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+    </com.adayo.an6v.ui.ParkingWarningView>
+	<com.adayo.an6v.ui.TopBar
+        android:id="@+id/topbar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

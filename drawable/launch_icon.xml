@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true">
+        <layer-list >
+            <item  android:drawable="@drawable/launcher_icon_bg_p"  />
+    		<item android:drawable="@drawable/launcher_icon"/>
+        </layer-list>
+     </item>
+    <item android:state_focused="true">
+        <layer-list >
+            <item  android:drawable="@drawable/launcher_icon_bg_p" />
+    		<item android:drawable="@drawable/launcher_icon"/>
+        </layer-list>
+     </item>
+    <item>
+        <layer-list >
+            <item  android:drawable="@drawable/launcher_icon_bg" />
+    		<item android:drawable="@drawable/launcher_icon"/>
+        </layer-list>
+     </item>
+</selector>

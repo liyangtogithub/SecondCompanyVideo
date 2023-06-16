@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grid_list_layout_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_back_area"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/list_layout_right_area_bg" >
+
+        <TextView
+            android:id="@+id/tv_back_to_palymask_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/ic_video_llist_back_to_playmask"
+            android:gravity="center"
+            android:paddingTop="@dimen/back_to_playmask_text_padding_top_in_center_gravity"
+            android:text="@string/playing_text"
+            android:textColor="@color/back_to_palymask_text"
+            android:textSize="@dimen/font_size_grid_list_now_playing_mode_sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_change_list_mode_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/change_list_mode_btn_margin_bottom"
+            android:focusable="true"
+             >
+
+            <com.adayo.an6v.ui.MarqueeTextView
+                android:id="@+id/tv_change_list_mode_id"
+                android:layout_width="@dimen/list_tv_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_list_mode_grid_btn"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="1"
+                android:paddingLeft="@dimen/change_list_mode_btn_text_padding_left"
+                android:paddingStart="@dimen/change_list_mode_btn_text_padding_left"
+                android:singleLine="true"
+                android:text="@string/thumbnail_text"
+                android:textColor="@color/change_list_mode_text"
+                android:textSize="@dimen/font_size_grid_list_list_mode_sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/rl_back_area"
+        android:nextFocusRight="@id/rl_change_list_mode_id" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_grid_list_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:nextFocusRight="@id/rl_change_list_mode_id"
+            android:paddingLeft="3dp"
+            android:paddingRight="0dp"
+            android:paddingTop="3dp" >
+        </android.support.v7.widget.RecyclerView>
+
+        <ListView
+            android:id="@+id/lv_grid_list_id"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/listview_height"
+            android:divider="@drawable/grid_list_divider"
+            android:listSelector="@drawable/selector_grid_list_item_list_mode"
+            android:nextFocusRight="@id/rl_change_list_mode_id"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarFadeDuration="0"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_show_info_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/text_list_empty"
+            android:textColor="@color/grid_list_item_title_text"
+            android:textSize="@dimen/font_size_info_text"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

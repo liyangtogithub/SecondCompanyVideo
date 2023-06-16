@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <com.adayo.an6v.ui.TopBar
+        android:id="@+id/topbar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+         <com.adayo.an6v.ui.ListTypeSelector
+    android:id="@+id/video_list_id"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content">
+        
+    </com.adayo.an6v.ui.ListTypeSelector>
+    -->
+
+    <com.adayo.videoplayer.widget.GridList
+        android:id="@+id/video_list_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

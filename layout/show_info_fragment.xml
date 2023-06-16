@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg" xmlns:app="http://schemas.android.com/apk/res/com.adayo.videoplayer">
+	
+    <com.adayo.an6v.ui.TopBar 
+        android:id="@+id/show_fragment_top_bar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title_mode="normal"
+        app:title_text="@string/app_name">
+        
+    </com.adayo.an6v.ui.TopBar>
+    
+    <RelativeLayout
+        android:layout_below="@+id/show_fragment_top_bar_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ProgressBar
+            android:id="@+id/progress_view_id"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+             />
+
+        <TextView
+            android:id="@+id/tv_info_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/no_device_text"
+            android:layout_below="@+id/progress_view_id"
+             android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
